@@ -8,7 +8,7 @@ namespace SimpleScene.Shaders
 {
     public class MainShader : IDisposable
     {
-        int Handle;
+        public int Handle { get; private set; }
 
         string VertexShaderSource;
         string FragmentShaderSource;

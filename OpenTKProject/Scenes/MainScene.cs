@@ -10,6 +10,7 @@ using OpenTK.Graphics.OpenGL;
 using SimpleScene.Shaders;
 using OpenTK.Input;
 using SimpleScene.Helpers;
+using System.Diagnostics;
 
 namespace SimpleScene.Scenes
 {
@@ -19,6 +20,7 @@ namespace SimpleScene.Scenes
         private int VertexBufferObject;
         private int VertexArrayObject;
         private MainShader Shader;
+        private Stopwatch _timer;
 
         public MainScene(int width, int height, string title)
             : base(width, height, GraphicsMode.Default, title)
@@ -62,8 +64,16 @@ namespace SimpleScene.Scenes
             GL.Clear(ClearBufferMask.ColorBufferBit);
 
             Shader.Use();
+
+            // update the uniform color
+            double timeValue = _timer.Elapsed.TotalSeconds;
+            float greenValue = (float)Math.Sin(timeValue) / (2.0f + 0.5f);
+            int vertexColorLocation = GL.GetUniformLocation(Shader.Handle, "ourColor");
+            GL.Uniform4(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+
             GL.BindVertexArray(VertexArrayObject);
             var indices = this.GetIndices();
+            //GL.DrawArrays(PrimitiveType.Polygon, 0, indices.Length);
             GL.DrawElements(PrimitiveType.Polygon, indices.Length, DrawElementsType.UnsignedInt, 0);
 
             Context.SwapBuffers();
@@ -85,6 +95,9 @@ namespace SimpleScene.Scenes
             GraphicsCard.PrintInfo();
 
             Console.WriteLine("Game loading...");
+
+            _timer = new Stopwatch();
+            _timer.Start();
 
             //Set background
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -118,6 +131,9 @@ namespace SimpleScene.Scenes
         {
             GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
             GL.DeleteBuffer(VertexBufferObject);
+
+            _timer.Stop();
+
             Shader.Dispose();
 
             base.OnUnload(e);

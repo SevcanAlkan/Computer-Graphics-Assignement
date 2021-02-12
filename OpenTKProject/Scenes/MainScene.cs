@@ -9,6 +9,7 @@ using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using SimpleScene.Shaders;
 using OpenTK.Input;
+using SimpleScene.Helpers;
 
 namespace SimpleScene.Scenes
 {
@@ -81,6 +82,8 @@ namespace SimpleScene.Scenes
 
         protected override void OnLoad(EventArgs e)
         {
+            GraphicsCard.PrintInfo();
+
             Console.WriteLine("Game loading...");
 
             //Set background

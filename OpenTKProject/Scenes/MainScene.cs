@@ -44,6 +44,13 @@ namespace SimpleScene.Scenes
             };
         }
 
+        float[] texCoords = {
+            0.0f, 1.0f,  // top-right corner
+            0.0f, 0.0f,  // lower-left corner  
+            1.0f, 0.0f,  // lower-right corner
+            1.0f, 1.0f   // top-left corner
+        };
+
         //protected override void OnKeyPress(KeyPressEventArgs e)
         //{
         //    if(e.KeyChar == Key.Escape)

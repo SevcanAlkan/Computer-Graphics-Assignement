@@ -283,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
 --- !u!1 &475183557
@@ -811,10 +811,8 @@ MonoBehaviour:
     HorizontalBobRange: 0.1
     VerticalBobRange: 0.05
     Bobcurve:
-      serializedVersion: 2
       m_Curve:
-      - serializedVersion: 3
-        time: 0
+      - time: 0
         value: 0
         inSlope: 0
         outSlope: 0
@@ -822,8 +820,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
+      - time: 0.5
         value: 1
         inSlope: 0
         outSlope: 0
@@ -831,8 +828,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+      - time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -840,8 +836,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
+      - time: 1.5
         value: -1
         inSlope: 0
         outSlope: 0
@@ -849,8 +844,7 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 2
+      - time: 2
         value: 0
         inSlope: 0
         outSlope: 0
@@ -862,12 +856,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     VerticaltoHorizontalRatio: 2
+    m_CyclePositionX: 0
+    m_CyclePositionY: 0
+    m_BobBaseInterval: 0
+    m_OriginalCameraPosition: {x: 0, y: 0, z: 0}
+    m_Time: 0
   jumpAndLandingBob:
     BobDuration: 0.15
     BobAmount: 0.2
+    m_Offset: 0
   rigidbodyFirstPersonController: {fileID: 1019986713}
   StrideInterval: 4
   RunningStrideLengthen: 0.722
+  m_PreviouslyGrounded: 0
+  m_OriginalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!81 &1406966251
 AudioListener:
   m_ObjectHideFlags: 0

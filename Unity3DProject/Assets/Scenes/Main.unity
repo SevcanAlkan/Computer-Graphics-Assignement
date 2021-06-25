@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThirdPersonController
       objectReference: {fileID: 0}
+    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -261,6 +265,14 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: bdd7a03fd93bf2d4cb6babd63ceabee8, type: 3}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_AnimSpeedMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_MoveSpeedMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
 --- !u!1001 &1042517928
@@ -318,6 +330,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95000010541276470, guid: 23d25b2e2d4364dd4b92c52ef40cd36e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7d470d0049b8c214091a81287840e2e0, type: 2}
+    - target: {fileID: 95000010700384334, guid: 23d25b2e2d4364dd4b92c52ef40cd36e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6825e5cbb3a96e54d91357806911ae1c, type: 2}
     - target: {fileID: 95000010748612786, guid: 23d25b2e2d4364dd4b92c52ef40cd36e,
         type: 3}
       propertyPath: m_Controller
@@ -391,7 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a2f71557ea4e85a860d98134dcbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntranceDoor: {fileID: 1042517931}
 --- !u!1001 &1232621733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -554,7 +575,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1042517928}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1288284161
+--- !u!114 &1288284162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -982,7 +1003,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1042517928}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2123226130
+--- !u!114 &2123226131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

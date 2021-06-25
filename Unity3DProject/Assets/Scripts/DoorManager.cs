@@ -14,13 +14,6 @@ namespace DefaultNamespace
         {
             components = GameObject.FindObjectsOfType<DoorHandler>();
             player = GameObject.FindWithTag("Player");
-
-            /*
-            foreach(IsObject comp in components)
-                isObject.Add(comp.gameObject);
-                */
-            
-            // entranceDoorHadler = EntranceDoor.GetComponent<DoorHandler>();
         }
         
         void Update()

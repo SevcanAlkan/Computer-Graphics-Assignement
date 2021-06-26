@@ -1,20 +1,22 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace DefaultNamespace
 {
     public class LightSwitch : MonoBehaviour
     {
-        private Light[] lights;
+        private List<Light> lights;
         
         private void Start()
         {
-            lights = GameObject.FindObjectsOfType<Light>();
+            lights = GameObject.FindObjectsOfType<Light>().Where(a=> !a.tag.Contains("DL")).ToList();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown("l") && lights != null && lights.Length>0)
+            if (Input.GetKeyDown("l") && lights != null && lights.Count>0)
             {
                 foreach (var light in lights)
                 {

@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - DL
+  - LeftArm
+  - RightArm
+  - Head
+  - LeftLeg
+  - RightLeg
   layers:
   - Default
   - TransparentFX
